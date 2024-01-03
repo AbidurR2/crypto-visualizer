@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Tracker</title>
+    <style>
+
+        .crypto-visualizer{
+            background-color: rgb(255, 255, 255);
+        }
+        .crypto-card {
+            width: 250px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin: 5px;
+            display: inline-block;
+            text-align: center;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .crypto-card:hover {
+            background-color: #f4f3f3; /* Change the background color on hover */
+        }
+        .price {
+            font-size: 18px;
+        }
+        .change {
+            color: red; /* You can add a function to change color based on positive or negative change */
+        }
+        .change2{
+            color: rgb(0, 150, 0);
+        }
+        .crypto-tracking{
+            margin: 0 auto;
+            width: 70%;
+        }
+        
+    </style>
+
+</head>
+<body class="crypto-visualizer" >
+<div class="crypto-tracking">
+
+    <div id="bitcoin" class="crypto-card">
+        <div class="logo">🔶</div> <!-- You can replace with actual logo images -->
+        <div class="name">Bitcoin</div>
+        <div class="price" id="btc-price">$37,516.00</div> 
+        <div class="change" id="btc-change">-0.75%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🔷</div> <!-- You can replace with actual logo images -->
+        <div class="name">Ethereum</div>
+        <div class="price" id="eth-price">$8,600.00</div> 
+        <div class="change" id="eth-change">-0.65%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🟢</div> <!-- You can replace with actual logo images -->
+        <div class="name">Tether</div>
+        <div class="price" id="tether-price">$1.00</div> 
+        <div class="change" id="tether-change">-0.01%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🔴</div> <!-- You can replace with actual logo images -->
+        <div class="name">BNB</div>
+        <div class="price" id="bnb-price">$228.79</div> 
+        <div class="change" id="bnb-change">-0.51%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🔮</div> <!-- You can replace with actual logo images -->
+        <div class="name">XRP</div>
+        <div class="price" id="xrp-price">$0.62</div> 
+        <div class="change2" id="xrp-change">0.47%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">💛</div> <!-- You can replace with actual logo images -->
+        <div class="name">Solana</div>
+        <div class="price" id="solana-price">$63.52</div> 
+        <div class="change" id="solana-change">-1.78%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🟫</div> <!-- You can replace with actual logo images -->
+        <div class="name">USDC</div>
+        <div class="price" id="usdc-price">$1.00</div> 
+        <div class="change2" id="usdc-change">0.00%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">⬛ </div> <!-- You can replace with actual logo images -->
+        <div class="name">Cardano</div>
+        <div class="price" id="cardano-price">$0.40</div> 
+        <div class="change" id="cardano-change">-1.04%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌕</div> <!-- You can replace with actual logo images -->
+        <div class="name">Dogecoin</div>
+        <div class="price" id="doge-price">$0.0856</div> 
+        <div class="change" id="doge-change">-0.63%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">☁️</div> <!-- You can replace with actual logo images -->
+        <div class="name">Tron</div>
+        <div class="price" id="tron-price">$0.10</div> 
+        <div class="change2" id="tron-change">0.08%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌧️</div> <!-- You can replace with actual logo images -->
+        <div class="name">Chainlink</div>
+        <div class="price" id="chainlink-price">$15.67</div> 
+        <div class="change" id="chainlink-change">-1.77%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">❄️</div> <!-- You can replace with actual logo images -->
+        <div class="name">Toncoin</div>
+        <div class="price" id="toncoin-price">$2.42</div> 
+        <div class="change" id="eth-change">-0.57%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌊</div> <!-- You can replace with actual logo images -->
+        <div class="name">Avalanche</div>
+        <div class="price" id="Avalanche-price">$21.96</div> 
+        <div class="change" id="Avalanche-change">-1.68%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍎</div> <!-- You can replace with actual logo images -->
+        <div class="name">Polygon</div>
+        <div class="price" id="Polygon-price">$0.81</div> 
+        <div class="change" id="Polygon-change">-0.58%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍇</div> <!-- You can replace with actual logo images -->
+        <div class="name">Polkadot</div>
+        <div class="price" id="polkadot-price">$5.55</div> 
+        <div class="change" id="polkadot-change">-0.40%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍊 </div> <!-- You can replace with actual logo images -->
+        <div class="name">Shiba Inu</div>
+        <div class="price" id="shiba-inu-price">$0.00000898</div> 
+        <div class="change2" id="shiba-inu-change">5.46%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍓</div> <!-- You can replace with actual logo images -->
+        <div class="name">Litecoin</div>
+        <div class="price" id="litecoin-price">$72.69</div> 
+        <div class="change2" id="litecoin-change">0.57%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍏</div> <!-- You can replace with actual logo images -->
+        <div class="name">Dai</div>
+        <div class="price" id="dai-price">$1.00</div> 
+        <div class="change" id="dai-change">-0.00%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍍 </div> <!-- You can replace with actual logo images -->
+        <div class="name">Bitcoin Cash</div>
+        <div class="price" id="bitcoin-cash-price">$229.87</div> 
+        <div class="change" id="bitcoin-cash-change">-0.40%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌶️</div> <!-- You can replace with actual logo images -->
+        <div class="name">Cosmos</div>
+        <div class="price" id="cosmos-price">$9.54</div> 
+        <div class="change" id="cosmos-change">-0.77%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍅</div> <!-- You can replace with actual logo images -->
+        <div class="name">Uniswap</div>
+        <div class="price" id="uniswap-price">$6.07</div> 
+        <div class="change" id="uniswap-change">-1.46%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍉</div> <!-- You can replace with actual logo images -->
+        <div class="name">OKB</div>
+        <div class="price" id="okb-price">$58.52</div> 
+        <div class="change" id="okb-change">-0.07%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍋</div> <!-- You can replace with actual logo images -->
+        <div class="name">Stellar Lumens</div>
+        <div class="price" id="stellar-lumens-price">$0.12</div> 
+        <div class="change2" id="eth-change">0.47%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍈</div> <!-- You can replace with actual logo images -->
+        <div class="name">.Alpha</div>
+        <div class="price" id=".alpha-price">$21.40</div> 
+        <div class="change2" id=".alpha-change">0.00%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🥭</div> <!-- You can replace with actual logo images -->
+        <div class="name">0Chain</div>
+        <div class="price" id="0Chain-price">$0.15</div> 
+        <div class="change" id="0Chain-change">-10.22%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🥦</div> <!-- You can replace with actual logo images -->
+        <div class="name">A2A</div>
+        <div class="price" id="a2a-price">$0.0116</div> 
+        <div class="change" id="a2a-change">-0.08%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍁</div> <!-- You can replace with actual logo images -->
+        <div class="name">A2Dao</div>
+        <div class="price" id="a2dao-price">$0.0282</div> 
+        <div class="change2" id="a2dao-change">4.58%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍂</div> <!-- You can replace with actual logo images -->
+        <div class="name">A4 Finance</div>
+        <div class="price" id="a4finance-price">$0.0012</div> 
+        <div class="change2" id="a4finance-change">1.39%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🍄</div> <!-- You can replace with actual logo images -->
+        <div class="name">ALEX Lab</div>
+        <div class="price" id="alexlab-price">$0.13</div> 
+        <div class="change2" id="alexlab-change">31.39%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🦋</div> <!-- You can replace with actual logo images -->
+        <div class="name">ADAX</div>
+        <div class="price" id="adax-price">$0.0037</div> 
+        <div class="change2" id="adax-change">4.96%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌕</div> <!-- You can replace with actual logo images -->
+        <div class="name">AI Trader</div>
+        <div class="price" id="ai-trader-price">$0.000188</div> 
+        <div class="change2" id="ai-trader-change">22.50%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌑</div> <!-- You can replace with actual logo images -->
+        <div class="name">AAG</div>
+        <div class="price" id="aag-price">$0.0037</div> 
+        <div class="change2" id="aag-change">1.78%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌙</div> <!-- You can replace with actual logo images -->
+        <div class="name">ABCMETA</div>
+        <div class="price" id="abcmeta-price">$0.00000749</div> 
+        <div class="change2" id="abcmeta-change">0.20%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌚</div> <!-- You can replace with actual logo images -->
+        <div class="name">7Pixels</div>
+        <div class="price" id="7pixels-price">$0.13</div> 
+        <div class="change" id="7pixels-change">-85.04%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌍</div> <!-- You can replace with actual logo images -->
+        <div class="name">APY.Finance</div>
+        <div class="price" id="apy.finance-price">$0.0013</div> 
+        <div class="change2" id="apy.finance-change">6.21%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌋</div> <!-- You can replace with actual logo images -->
+        <div class="name">Acquire.Fi</div>
+        <div class="price" id="acquire.fi-price">$0.0283</div> 
+        <div class="change" id="acquire.fi-change">-8.49%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌄</div> <!-- You can replace with actual logo images -->
+        <div class="name">2SHARE</div>
+        <div class="price" id="2share-price">$12.68</div> 
+        <div class="change" id="2share-change">-1.82%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌅</div> <!-- You can replace with actual logo images -->
+        <div class="name">AICHAIN</div>
+        <div class="price" id="aichain-price">$0.0022</div> 
+        <div class="change2" id="aichain-change">1.93%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌇</div> <!-- You can replace with actual logo images -->
+        <div class="name">Achain</div>
+        <div class="price" id="achain-price">$0.0013</div> 
+        <div class="change" id="achain-change">-2.28%</div> 
+    </div>
+
+    <div id="ethereum" class="crypto-card">
+        <div class="logo">🌌</div> <!-- You can replace with actual logo images -->
+        <div class="name">1irstGold</div>
+        <div class="price" id="1irstGold-price">$58.01</div> 
+        <div class="change" id="1irstGold-change">-0.01%</div> 
+    </div>
+   
+</div>
+<!-- Repeat above div structure for other cryptocurrencies -->
+
+<script src="./app.js"></script> <!-- Link to your JS file -->
+
+</body>
+</html>
